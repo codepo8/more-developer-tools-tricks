@@ -45,17 +45,25 @@
             left: 10px;
             right: 10px;
             bottom: 10px;
-    border: 2px solid #fff;
-display:none;}
-
+            border: 2px solid #fff;
+            display: none;
+        }
+        #navigation {
+            display: flex;
+        }
+        #navigation > * {
+            flex: 1;
+            padding: 1em;
+        }
         
     </style>
 </head>
 <body>
 {{ content }}
-
-{% include toc.html %}
-{% include contact.html %}
+<div id="navigation">
+    {% include toc.html %}
+    {% include contact.html %}
+</div>
 {% include gallery.html %}
 
 </body>
