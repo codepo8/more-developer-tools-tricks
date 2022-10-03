@@ -70,9 +70,10 @@ img {
 }
 output {
     position: absolute;
-    top: 50px;
-    left: 100px;
-    right: 100px;
+    position: absolute;
+    top: 130px;
+    left: 40px;
+    right: 450px;
     border: 5px solid var(--border-colour);
     box-shadow: 5px 5px 5px rgba(0,0,0,.5);
     display: none;
