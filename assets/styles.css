@@ -1,10 +1,11 @@
 :root {
     --border-colour: white;
+    --hoverback: #084571;
 }
 body {
     font-family: "Inter tight", helvetica, sans-serif;
     font-size: 1.2em;
-    background: url(/more-developer-tools-tricks//assets/images/CPH-2021-slides-1.jpg) no-repeat,linear-gradient(to right, #1177c2,#147ecf), #1b8bdd;
+    background: url(/more-developer-tools-tricks//assets/images/s1.jpg) no-repeat,linear-gradient(to right, #1177c2,#147ecf), #1b8bdd;
     background-size: contain;
     background-position: right top;
     color: white;
@@ -12,6 +13,7 @@ body {
 @media (prefers-color-scheme: light) {
     :root {
        --border-colour: #333;
+       --hoverback: #42b0ff;
     }
     body {
         background: #f8f8f8;
@@ -38,7 +40,7 @@ ul {
     background-size: 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
-    background-image:linear-gradient(to right,#084571,#084571) ;
+    background-image:linear-gradient(to right,var(--hoverback),var(--hoverback));
 }
 #toc ul ul li:hover {
     background: transparent;
