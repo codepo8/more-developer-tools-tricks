@@ -5,8 +5,8 @@
 body {
     font-family: "Inter tight", helvetica, sans-serif;
     font-size: 1.2em;
-    background: url(/more-developer-tools-tricks//assets/images/s1.jpg) no-repeat,linear-gradient(to right, #1177c2,#147ecf), #1b8bdd;
-    background-size: contain;
+    background: url(/more-developer-tools-tricks//assets/images/s1.jpg) ,linear-gradient(to right, #1177c2,#147ecf), #1b8bdd;
+    background-size: cover;
     background-position: right top;
     color: white;
 }
@@ -41,6 +41,10 @@ ul {
     background-repeat: no-repeat;
     transition: background-size 400ms;
     background-image:linear-gradient(to right,var(--hoverback),var(--hoverback));
+}
+#toc ul ul li {
+    font-size: .8em;
+    border: none;
 }
 #toc ul ul li:hover {
     background: transparent;
@@ -87,7 +91,7 @@ output {
     padding: 1em;
 }
 #qr {
-    margin: 0 auto 0 auto;
+    margin: 60px auto 0 auto;
 }
 #qr img {
     width: 400px;
