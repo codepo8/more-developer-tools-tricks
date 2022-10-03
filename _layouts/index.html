@@ -8,7 +8,7 @@
         body {
             font-family: helvetica, sans-serif;
             font-size: 1.2em;
-            background:url(../assets/images/CPH-2021-slides-1.jpg) #ccc;
+            background:url(/assets/images/CPH-2021-slides-1.jpg) #ccc;
             background-size: cover;
             background-position: right top;
             color: white;
@@ -54,9 +54,9 @@ display:none;}
 <body>
 {{ content }}
 
-{% include toc.html %}
-{% include contact.html %}
-{% include gallery.html %}
+{% include "toc.html" %}
+{% include "contact.html" %}
+{% include "gallery.html" %}
 
 <script>
 const o = document.querySelector('output');
