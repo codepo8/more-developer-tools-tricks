@@ -17,7 +17,7 @@ body {
         background: #f8f8f8;
         color: #333;
     }
-    a {color: green;}
+    body a {color: green;}
 }
 a {color: lime;}
 h1 {
@@ -35,17 +35,17 @@ ul {
     border: 1px solid var(--border-colour);
     margin-bottom: .4em;
     transition: 300ms;
-}
-#toc ul ul li {
-    font-size: .8em;
-    border: none;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+    background-image:linear-gradient(to right,#084571,#084571) ;
 }
 #toc ul ul li:hover {
     background: transparent;
     color: white;
 }
 #toc ul > li:hover {
-    background: #084571;
+    background-size: 100% 100%;
     color: white;
 }
 #gallery {
@@ -60,13 +60,13 @@ ul {
 }
 img {
     width: 100%;
+    display: block;
 }
 output {
     position: absolute;
     top: 50px;
     left: 100px;
     right: 100px;
-    bottom: 50px;
     border: 5px solid var(--border-colour);
     box-shadow: 5px 5px 5px rgba(0,0,0,.5);
     display: none;
@@ -85,7 +85,7 @@ output {
     padding: 1em;
 }
 #qr {
-    margin: 50px auto 0 auto;
+    margin: 0 auto 0 auto;
 }
 #qr img {
     width: 400px;
