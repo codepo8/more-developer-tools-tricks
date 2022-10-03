@@ -1,3 +1,6 @@
+:root {
+    --border-colour: white;
+}
 body {
     font-family: "Inter tight", helvetica, sans-serif;
     font-size: 1.2em;
@@ -6,10 +9,15 @@ body {
     background-position: right top;
     color: white;
 }
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #333;
+@media (prefers-color-scheme: light) {
+    :root {
+       --border-colour: #333;
     }
+    body {
+        background: #f8f8f8;
+        color: #333;
+    }
+    a {color: green;}
 }
 a {color: lime;}
 h1 {
@@ -24,7 +32,7 @@ ul {
 #toc ul > li {
     padding: .4em 0.5em;
     font-size: 1.4em;
-    border: 1px solid #fff;
+    border: 1px solid var(--border-colour);
     margin-bottom: .4em;
     transition: 300ms;
 }
@@ -47,7 +55,7 @@ ul {
 }
 #gallery li {
     flex: 1;
-    border: 2px solid #fff;
+    border: 2px solid var(--border-colour);
     box-shadow: 5px 5px 5px rgba(0,0,0,.5);
 }
 img {
@@ -59,7 +67,7 @@ output {
     left: 10px;
     right: 10px;
     bottom: 10px;
-    border: 2px solid #fff;
+    border: 2px solid var(--border-colour);
     display: none;
 }
 #navigation {
@@ -78,6 +86,7 @@ output {
 }
 #qr img {
     width: 400px;
+    border: 2px solid var(--border-colour);
 }
 #contact p {
     margin: 0 0 .5em 0;
