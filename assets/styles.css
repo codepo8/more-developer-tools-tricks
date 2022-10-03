@@ -25,6 +25,8 @@ a {color: lime;}
 h1 {
     font-size: 2em;
     max-width: 500px;
+    padding-left: 1em;
+    background: #1e8fe3;
 }
 ul {
     list-style: none;
