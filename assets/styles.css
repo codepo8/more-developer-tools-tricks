@@ -4,8 +4,8 @@
 body {
     font-family: "Inter tight", helvetica, sans-serif;
     font-size: 1.2em;
-    background:url(/more-developer-tools-tricks//assets/images/CPH-2021-slides-1.jpg) #1b8bdd;
-    background-size: cover;
+    background: url(/more-developer-tools-tricks//assets/images/CPH-2021-slides-1.jpg) no-repeat,linear-gradient(to right, #1177c2,#147ecf), #1b8bdd;
+    background-size: contain;
     background-position: right top;
     color: white;
 }
@@ -63,19 +63,22 @@ img {
 }
 output {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border: 2px solid var(--border-colour);
+    top: 50px;
+    left: 100px;
+    right: 100px;
+    bottom: 50px;
+    border: 5px solid var(--border-colour);
+    box-shadow: 5px 5px 5px rgba(0,0,0,.5);
     display: none;
 }
 #navigation {
     display: flex;
+    flex-wrap: wrap;
 }
 #toc {
     flex: 4;
     padding: 1em;
+    min-width: 550px;
 }
 #contact {
     flex: 1;
