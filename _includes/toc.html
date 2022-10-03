@@ -11,17 +11,13 @@
         <ul>
             <li><a href="https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/console/utilities">Show me the $</a></li>
             <li>Embrace the values</li>
-            <li>More than log()
-                <ul>
-                    <li>Info, error, warn…</li>
-                    <li>table()</li>
-                    <li>count</li>
-                    <li>group</li>
-                </ul>
-            </li>
+            <li>Info, error, warn…</li>
+            <li>table()</li>
+            <li>count</li>
+            <li>group</li>
             <li>copy()</li>
             <li>monitor events</li>
-            <li>Live Expressions</li>
+            <li>Live Expressions <label><input type="checkbox">Log mouse movement</label></li>
         </ul></details>
     </li>
     <li><a href="https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/device-mode/">Device / Mode /   tricks</a></li>
@@ -58,4 +54,14 @@
     </li>
     </ul>
 </div>    
-    
+<script>
+let x = 0;
+let y = 0;
+document.addEventListener('mousemove', e => {
+  x = e.x;
+  y = e.y;
+if(document.querySelector('input').checked) {
+  console.log({x}, {y});
+}
+});
+</script>      
