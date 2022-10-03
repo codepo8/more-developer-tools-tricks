@@ -13,3 +13,15 @@
     </a></li>
 </ul>
 <output></output>
+<script>
+const o = document.querySelector('output');
+o.addEventListener('click', e => o.style.display = 'none');
+document.querySelector('#gallery').addEventListener('click', e => {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        o.innerHTML = `<img src="${e.target.src}" alt="">`;
+        o.style.display = 'block';
+    }
+});
+</script>
+    

@@ -54,23 +54,9 @@ display:none;}
 <body>
 {{ content }}
 
-{% include "toc.html" %}
-{% include "contact.html" %}
-{% include "gallery.html" %}
+{% include toc.html %}
+{% include contact.html %}
+{% include gallery.html %}
 
-<script>
-const o = document.querySelector('output');
-o.addEventListener('click', e => {
-    o.style.display = 'none';
-});
-document.querySelector('#gallery').addEventListener('click', e => {
-    if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-        o.innerHTML = `<img src="${e.target.src}" alt="">`;
-        o.style.display = 'block';
-    }
-});
-
-</script>
 </body>
 </html>
