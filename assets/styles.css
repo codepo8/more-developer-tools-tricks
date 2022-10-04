@@ -9,6 +9,8 @@ body {
     background-size: cover;
     background-position: right top;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 @media (prefers-color-scheme: light) {
     :root {
@@ -26,7 +28,8 @@ h1 {
     font-size: 2em;
     max-width: 500px;
     padding-left: 1em;
-    background: #1e8fe3;
+    background: var(--hoverback);
+    padding: .2em .5em;
 }
 ul {
     list-style: none;
