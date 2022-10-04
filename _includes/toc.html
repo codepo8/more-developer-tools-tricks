@@ -65,13 +65,16 @@ document.addEventListener('mousemove', e => {
     }
 });
 const grouplog = (name, collapsed, ...args) => {
-    let out = ';'
+    let out = ''
     if (collapsed) {
-        out += (`console.groupCollapsed('${name}');`);
+        out += (`console.groupCollapsed('${name}');
+        `);
     } else {
-        out += (`console.group('${name}');`);
+        out += (`console.group('${name}');
+        `);
     }
-    args.forEach(arg => out+=(`console.log(${arg});`));
+    args.forEach(arg => out+=(`console.log(${arg});
+    `));
     out += (`console.groupEnd('${name}');`);
     console.log('%c'+out,'margin:1em;padding:.5em;border:1px solid #333;');
     if (collapsed) {
