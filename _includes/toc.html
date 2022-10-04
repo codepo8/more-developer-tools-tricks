@@ -14,10 +14,10 @@
             <li>Info, error, warn…</li>
             <li>table()</li>
             <li>count</li>
-            <li>group</li>
+            <li><button id="groups">group</button></li>
             <li>copy()</li>
             <li>monitor events</li>
-            <li>Live Expressions <label><input type="checkbox">Log mouse movement</label></li>
+            <li>Live Expressions <label><input id="mm" type="checkbox">Log mouse movement</label></li>
         </ul></details>
     </li>
     <li><a href="https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/device-mode/">Device / Mode /   tricks</a></li>
@@ -58,10 +58,27 @@
 let x = 0;
 let y = 0;
 document.addEventListener('mousemove', e => {
-  x = e.x;
-  y = e.y;
-if(document.querySelector('input').checked) {
-  console.log({x}, {y});
-}
+    x = e.x;
+    y = e.y;
+    if(document.querySelector('#mm').checked) {
+    console.log({x}, {y});
+    }
 });
+const grouplog = (name, collapsed, ...args) => {
+    if (collapsed) {
+        console.log(`console.group(${name});`);
+    } else {
+        console.log(`console.groupCollapsed(${name});`);
+    }
+    args.forEach(arg => console.log(`console.log(${arg});`));
+    console.log(`console.groupEnd(${name});`);
+    console.group(name);
+    args.forEach(arg => console.log(arg));
+    console.groupEnd(name);
+}
+document.querySelector('#groups').addEventListener('click', () => {
+    grouplog('Group 1', false, 'Item 1', 'Item 2');
+    grouplog('Group 2', true, 'Item 1', 'Item 2');
+});
+
 </script>      
