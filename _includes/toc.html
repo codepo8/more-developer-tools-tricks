@@ -67,12 +67,12 @@ document.addEventListener('mousemove', e => {
 const grouplog = (name, collapsed, ...args) => {
     let out = ''
     if (collapsed) {
-        out += (`console.groupCollapsed('${name}'); + "\n\n"`);
+        out += (`console.groupCollapsed('${name}'); `+ "\n\n");
     } else {
-        out += (`console.group('${name}'); + "\n\n"`);
+        out += (`console.group('${name}'); `+ "\n\n");
     }
     args.forEach(arg => out+=(`console.log(${arg});` + "\n\n"));
-    out += (`console.groupEnd('${name}'); + "\n\n"`);
+    out += (`console.groupEnd('${name}');`+ "\n\n");
     console.log('%c'+out,'white-space:pre;margin:1em;padding:.5em;border:1px solid #333;');
     if (collapsed) {
         console.groupCollapsed(name);
