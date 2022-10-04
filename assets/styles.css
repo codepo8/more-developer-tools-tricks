@@ -44,8 +44,13 @@ ul {
     transition: 300ms;
     background-size: 0 100%;
     background-repeat: no-repeat;
-    transition: background-size 400ms;
     background-image:linear-gradient(to right,var(--hoverback),var(--hoverback));
+    transition: background-size 400ms;
+}
+@media (prefers-motion-reduce: reduce) {
+    #toc ul > li {
+        transition: none;
+    }
 }
 #toc ul ul li {
     font-size: .8em;
