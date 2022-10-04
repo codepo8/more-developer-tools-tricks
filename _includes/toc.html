@@ -65,24 +65,26 @@ document.addEventListener('mousemove', e => {
     }
 });
 const grouplog = (name, collapsed, ...args) => {
+    let out = ';'
     if (collapsed) {
-        console.log(`console.group('${name}');`);
+        out += (`console.groupCollapsed('${name}');`);
     } else {
-        console.log(`console.groupCollapsed('${name}');`);
+        out += (`console.group('${name}');`);
     }
-    args.forEach(arg => console.log(`console.log(${arg});`));
-    console.log(`console.groupEnd('${name}');`);
+    args.forEach(arg => out+=(`console.log(${arg});`));
+    out += (`console.groupEnd('${name}');`);
+    console.log('%c'+out,'margin:1em;padding:.5em;border:1px solid #333;');
     if (collapsed) {
-        console.group(name);
-    } else {
         console.groupCollapsed(name);
+    } else {
+        console.group(name);
     }
     args.forEach(arg => console.log(arg));
     console.groupEnd(name);
 }
 document.querySelector('#groups').addEventListener('click', () => {
-    grouplog('Group 1', false, 'Item 1', 'Item 2');
-    grouplog('Group 2', true, 'Item 1', 'Item 2');
+    grouplog('Excellent animals', false, 'Dogs, duh', 'Capybara', 'Wombats', 'Axolotls');
+    grouplog('Heart of Gold crew', true, 'Zaphod', 'Trillian', 'Marvin', 'Arthur', 'Ford');
 });
 
 </script>      
