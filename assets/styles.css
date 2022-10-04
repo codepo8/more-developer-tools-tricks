@@ -99,7 +99,7 @@ output {
 }
 #contact {
     flex: 1;
-    padding: 1em;
+    padding: 0 1em;
 }
 #qr {
     margin: 0 auto 0 auto;
@@ -109,7 +109,7 @@ output {
     border: 2px solid var(--border-colour);
 }
 #contact p {
-    margin: 0 0 .5em 0;
+    margin: 0 0 .2em 0;
 }
 #contact p a {
     text-decoration: none;
