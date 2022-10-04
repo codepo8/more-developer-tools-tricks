@@ -47,7 +47,7 @@ ul {
     background-image:linear-gradient(to right,var(--hoverback),var(--hoverback));
     transition: background-size 400ms;
 }
-@media (prefers-motion-reduce: reduce) {
+@media (prefers-reduced-motion) {
     #toc ul > li {
         transition: none;
     }
