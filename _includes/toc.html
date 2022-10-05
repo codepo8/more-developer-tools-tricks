@@ -98,10 +98,10 @@ document.querySelector('#groups').addEventListener('click', () => {
 window.onload = () => {
     let o = document.querySelector('output');
     let rect = document.querySelector('#toc').getBoundingClientRect();
-    o.style.top = rect.top;
-    o.style.left = rect.left;
-    o.style.right = rect.right;
-    o.style.bottom = rect.bottom;
+    o.style.top = rect.top + 'px';
+    o.style.left = rect.left + 'px';
+    o.style.width = rect.width + 'px';
+    o.style.height = rect.height + 'px';
 
 }
 </script>      
