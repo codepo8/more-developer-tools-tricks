@@ -41,7 +41,6 @@ ul {
     font-size: 1.4em;
     border: 1px solid var(--border-colour);
     margin-bottom: .4em;
-    transition: 300ms;
     background-size: 0 100%;
     background-repeat: no-repeat;
     background-image:linear-gradient(to right,var(--hoverback),var(--hoverback));
@@ -97,6 +96,7 @@ output {
     padding: 1em;
     min-width: 550px;
 }
+
 #contact {
     flex: 1;
     padding: 0 1em;

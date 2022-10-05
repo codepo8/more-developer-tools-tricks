@@ -95,5 +95,13 @@ document.querySelector('#groups').addEventListener('click', () => {
     grouplog('Excellent animals', false, 'Dogs, duh', 'Capybara', 'Wombats', 'Axolotls');
     grouplog('Heart of Gold crew', true, 'Zaphod', 'Trillian', 'Marvin', 'Arthur', 'Ford');
 });
+window.onload = () => {
+    let o = document.querySelector('output');
+    let rect = document.querySelector('#toc').getBoundingClientRect();
+    o.style.top = rect.top;
+    o.style.left = rect.left;
+    o.style.right = rect.right;
+    o.style.bottom = rect.bottom;
 
+}
 </script>      
